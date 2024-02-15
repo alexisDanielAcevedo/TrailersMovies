@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>TrailersMovies</title>
+    <link rel="icon"  href="./img/icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/movies.css">
+    <script src="https://kit.fontawesome.com/c58785cb0f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="hero" id="hero">
+        <nav class="nav container" id="nav">
+            <h2 class="nav_logo"><i class='bx bx-movie-play'></i>TRAILERS<span>MOVIES.</span></h2>
+
+            <!-- <ul class="nav_links">
+                <li class="nav_item"><a href="#" class="nav_link">Start</a></li>
+                <li class="nav_item"><b><a href="#" class="nav_link">Movies</a></b></li>
+            </ul> 
+
+            <a href="#nav" class="nav_hamburguesa">
+                <i class='bx bx-menu nav_icon' style='color:#ffffff'></i>
+            </a>
+
+            <a href="#" class="nav_close">
+                <i class='bx bx-x nav_icon_close' style="color: #ffffff;"></i>
+            </a> -->
+
+        </nav>
+
+       
+    </header> 
+    
+    
+
+    <main id="movieContainer">
+
+        <img id="movieImageBack" src="" alt="BackDrop" srcset="">
+
+        <div id="moviePoster">
+
+            <img id="movieImagePoster" src="" alt="Poster" srcset="">
+
+            <div id="movieInfo">
+                <h1 id="movieTitle"></h1>
+                <p id="movieGenres"></p>
+                <p id="movieOverview"></p>
+
+                <div id="star">
+                    <p id="TMDB">TMDB</p>
+                    <i class='bx bxs-star'></i>
+                    <p id="movieRating"></p>
+                </div>
+                <button id="trailerButton" type="button">
+                    <i class='bx bx-play-circle'></i>
+                    <p>Play Trailer</p>
+                </button>
+            </div>
+        </div>       
+
+    </main>
+
+
+    <section id="section-genres">
+    <ul class="menu_genres">
+       
+        <li class="genres-item">
+            <a href="#" class="genres-title">Genres<i class='bx bx-chevron-down' style='color:#000000'  ></i></a>
+            <input type="checkbox" class="check">
+            
+            <div class="menu-content">
+                <ul class="menu-vertical">
+                    <li><a href="popular.html">Popular</a></li>
+                    <li><a href="horror.html">Horror</a></li>
+                    <li><a href="war.html">War</a></li>
+                    <li><a href="fantasy.html">Fantasy</a></li>
+                    <li><a href="comedy.html">Comedy</a></li>
+                    <li><a href="actionAdvenMovies.html">Action/Adventure</a></li>
+                </ul>
+            </div>
+            
+        </li>
+    </ul>
+    </section>
+
+    <section id="sectionMovies">
+        <h4 class="section-title">Popular Movies</h4>
+        <div class="movie-slider" id="movieSlider"></div>
+   
+        <h4 class="section-title">Horror Movies</h4>
+        <div id="horrorMoviesSlider" class="movie-slider"></div>
+        
+
+        <h4 class="section-title">Upcoming Movies</h4>
+        <div class="movie-slider" id="upcomingMoviesSlider"></div>
+
+
+        <h4 class="section-title">War Movies</h4>
+        <div class="movie-slider" id="actionWarMoviesSlider"></div>
+      
+        <h4 class="section-title">Action and Adventure </h4>
+        <div class="movie-slider" id="actionAdventureMoviesSlider"></div>
+
+        <h4 class="section-title">Fantasy Movies</h4>
+        <div class="movie-slider" id="fantasyMoviesSlider"></div>
+
+        <h4 class="section-title">Comedy Movies</h4>
+        <div class="movie-slider" id="comedyMoviesSlider"></div>
+    </section>
+
+      <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal"><i class='bx bx-x nav_icon_close' style="color: #ffffff;"></i></span>
+            <img id="modalPoster" alt="Poster de la película" class="modal-poster">
+            <h2 id="modalTitle"></h2>
+            <p><span id="modalGenre"></span></p>
+            <p><span id="modalOverview"></span></p>
+            <div id="modalStar">
+                <p id="modalTMDB">TMDB</p>
+                <i class='bx bxs-star modalBxStar'></i>
+                <p id="modalRating"></p>
+                <p id="modalReleaseDate"></p>
+            </div>
+            <button id="watchTrailer">
+                <i class='bx bx-play-circle'></i>
+                <p>Play Trailer</p>
+            </button>
+        </div>
+    </div>
+
+
+    
+    
+    <footer class="footer">
+        <div class="contenedorDeColores">
+            <div class="color"></div>
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+        </div>
+        
+        <div class="derechos">
+            © 2024 Created by - Alexis Acevedo.
+        </div>
+    </footer>
+
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/films.js"></script>
+    
+ </body>
+</html>

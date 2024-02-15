@@ -1,0 +1,329 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bakbak One', cursive;
+
+}
+:root{
+  --color-primary : #fff;
+  --color-second : #141414;
+  --color-fourth : #e45353;
+  --color-fifth: #9CE45F;
+}
+
+#sectionMovies{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 30px;
+
+
+}
+.section-title{
+  color: white;
+  text-align: start;
+  padding: 0px 0 0px;
+  width: 80%;
+  font-size: 20px;
+  }
+
+.movie-slider {
+  width: 80%;
+  height: 200px;
+ 
+  margin: 20px auto;
+  display: flex;
+  overflow-x: auto;
+}
+
+.movie-poster {
+  margin-right: 10px;
+  cursor: pointer;
+ 
+  border-radius: 5px;
+  
+}
+.movie-poster:hover {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--color-second);
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Añadir transición aquí */
+ 
+}
+
+
+.modal-content {
+  height: auto;
+  margin: 5% auto;
+  background-color: var(--color-second);
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: var(--color-primary);
+  max-width: 400px;
+}
+#modalPoster{
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
+.modalBxStar{
+  padding: 0px 0px 0px 0px;
+  margin-left: 20px;
+  margin-right: 4px;
+}
+#modalRating{
+  margin-right: 20px;
+  padding: 0px 0;
+  /* font-size: 18px; */
+}
+.close {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+ 
+  width: 100%;
+  text-align: end;
+}
+
+#modalPoster{
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
+#modalTitle{
+  padding: 5px 0;
+  font-size: 23px;
+}
+#modalGenre{
+  padding: 0px 0;
+  font-size: 18px;
+  color: var(--color-fifth);
+}
+#modalOverview{
+  padding: 5px 0;
+  width: 100%;
+  font-size: 14px;
+}
+#modalStar{
+  padding: 10px 0;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  
+  align-items: center;
+  
+  
+}
+#modalTMDB{
+  font-size: 14px; 
+  background-color: var(--color-second);
+  border-radius: 5px;
+  border: solid var(--color-primary) 2px;
+  padding: 0 10px;
+  letter-spacing: 2px;
+}
+.modalBxStar{
+  padding: 0px 0px 0px 0px;
+  margin-left: 20px;
+}
+#modalRating{
+  margin-right: 20px;
+  padding: 0px 0;
+  /* font-size: 18px; */
+}
+#modalReleaseDate{
+  /* font-size: 17px; */
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+#watchTrailer{
+  display: flex;
+  margin-top: 10px;
+  gap: 5px;
+  align-items: center;
+
+  background-color: var(--color-second);
+  color: var(--color-primary);
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  border: solid 2px var(--color-primary);
+  border-radius: 3px;
+  padding: 6px 0;
+  width: 100%;
+  transition: 0.5s;
+}
+#watchTrailer i{
+ font-size: 30px;
+}
+
+
+.close {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+ position: relative;
+  width: 100%;
+  text-align: end;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+
+.modal-open {
+  overflow: hidden;
+}
+
+@media (min-width:858px){
+  .movie-slider {
+    width: 90%;
+    height: 300px;
+    margin: 0px 0px 30px ;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 10px;
+    /* background-color: #9CE45F; */
+  }
+  
+  .movie-poster {
+    
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; 
+  }
+  .movie-poster:hover {
+    margin-right:  20px;
+    cursor: pointer;
+    transform: scale(1.1); 
+
+  }
+  
+
+  #sectionMovies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    }
+    .section-title{
+      color: white;
+      text-align: start;
+      padding: 20px 10px 0px ;
+      width: 90%;
+      font-size: 25px;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #141414c7;
+      }
+      
+      .modal-content {
+        background-color: var(--color-second);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        max-width: 500px;
+        width: 500px;
+        height: auto;
+        margin: 5% auto;
+        color: var(--color-primary);
+        box-shadow: 0 4px 8px rgba(250, 250, 250, 0.2);
+      }
+      #modalPoster{
+        width: 200px;
+        height: 300px;
+        border-radius: 5px;
+      }
+      .modalBxStar{
+        padding: 0px 0px 0px 0px;
+        margin-left: 20px;
+        margin-right: 4px;
+      }
+      #modalRating{
+        margin-right: 20px;
+        padding: 0px 0;
+        /* font-size: 18px; */
+      }
+
+      #watchTrailer{
+        display: flex;
+        margin-top: 10px;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-second);
+        color: var(--color-primary);
+        width: auto;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        padding: 0 5px;
+      
+       transition: 0.5s;
+      }
+      #watchTrailer i{
+       font-size: 30px;
+      }
+      #watchTrailer:hover{
+        color: #e45353;
+        transition: 0.5s;
+       }
+
+      .close {
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+       
+        width: 100%;
+        text-align: end;
+      }
+
+
+      .movie-slider::-webkit-scrollbar {
+        height: 15px;
+        
+      }
+      
+      .movie-slider::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 6px;
+      }
+      
+      .movie-slider::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 6px;
+      }
+      
+      .movie-slider::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+}

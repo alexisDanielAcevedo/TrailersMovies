@@ -1,0 +1,645 @@
+:root{
+    --color-primary : #fff;
+    --color-second : #141414;
+    --color-fourth : #e45353;
+    --color-fifth: #9CE45F;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bakbak One', cursive;
+
+}
+body{
+     background-color: var(--color-second);
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+}
+
+.hero{
+    background-size: cover;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    color: var(--color-primary);
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.116);
+    transition: 0.5s;
+
+   
+}
+
+  
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+.scrollNav{
+   
+    transition: 0.5s;
+    background-color: var(--color-second);
+
+}
+.scrollNav .nav_logo{
+    color: var(--color-fifth);
+}
+.scrollNav .nav_icon{
+    color: var(--color-primary);
+}
+
+
+.nav{
+    --state-close:scale(0);
+    --state-hamburguesa:scale(1);
+    --state-menu:translate(-100%);
+
+
+    padding: 10px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+}
+.nav:target{
+    --state-menu:translate(0);
+    --state-hamburguesa:scale(0);
+    --state-close:scale(1);
+}
+.nav_logo{
+    display: flex;
+    font-size: 20px;
+    color: var(--color-fourth);
+    letter-spacing: 3px;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+.nav_logo i{
+ font-size: 25px;
+}
+.nav_logo span{
+    color: var(--color-fourth);
+}
+
+/* .nav_hamburguesa,
+.nav_close{
+    cursor: pointer;
+    grid-column:-2/-1 ;
+    grid-row: 1/2;
+    transition: .4s transform;
+} */
+
+/* .nav_hamburguesa{
+    transform: var(--state-hamburguesa);
+    z-index: 3;
+}
+.nav_close{
+    transform:var(--state-close);
+    z-index: 3;
+} */
+
+/* .nav_links{
+   background:var(--color-second);
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 0;
+
+   display: grid;
+   align-content: center;
+   padding-left: 5%;
+   justify-content: center;
+   text-align: center;
+   transform: var(--state-menu);
+   transition: .3s transform;
+   z-index: 1;
+} */
+
+/* .nav_item{
+    list-style: none;
+
+    padding: 20px;
+    transform: var(--state-menu);
+    position: relative;
+} */
+
+/* .nav_link{
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+    
+} */
+/* .nav_link:hover{
+    color: var(--color-fourth);
+    transition: ease-in-out all 0.2s;
+}
+.scrollNav .nav_link:hover{
+    color: var(--color-fourth);
+} */
+
+/* .nav_icon{
+    color:var(--color-primary);
+    font-size: 35px;
+}
+.nav_icon_close{
+    color: var(--color-second);
+    font-size: 35px;
+}    */
+
+
+
+.menu_genres{
+  background:var(--color-second);      
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  transform: var(--state-menu);
+  transition: .3s transform;
+  margin-top: 40px;
+  
+}
+.genres-title{
+  color: var(--color-second);
+  font-size: 22px;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.genres_title{
+  margin-top: 50px;
+  color: white;
+  text-align: start;
+  padding: 0px 0 0px;
+  width: 80%;
+  font-size: 25px;
+}
+.bx-chevron-down{
+  transform: var(--rotate,0);
+  transition: .2s transform;
+  margin-left: 10px;
+
+}
+.check{
+  position: absolute;
+  
+  top: 15px;
+  left:0;
+  opacity:0;
+  width: 100%;
+  height: 41px;
+  cursor: pointer;
+}
+.genres-item{
+  list-style: none;
+
+  padding: 20px;
+  transform: var(--state-menu);
+  position: relative;
+}
+.genres-item:has( :checked){
+  --rows:1fr;
+  --rotate:rotate(180deg);
+  position: relative;
+}
+.menu-content{
+  display: grid;
+  justify-content: center;
+  grid-template-rows:var(--rows, 0fr) ;
+  transition: .3s grid-template-rows;
+  margin-top: 20px;
+}
+.menu-vertical{
+  background-color: var(--color-second);
+  overflow: hidden;
+}
+.menu-vertical li{
+  color: var(--color-primary);
+}
+.menu-vertical a{
+  color: var(--color-primary);
+}
+
+/* =======================NAV================= */
+
+
+  #movieContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    color: var(--color-primary);
+    
+    margin-top: 100px;
+  }
+
+  #movieImageBack {
+    display: none;
+  } 
+
+
+  #moviePoster {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    
+  
+  }
+
+  #movieInfo{
+    max-width: 500px;
+    padding: 0 20px;
+
+  }
+
+  #movieTitle{
+    margin-top: 10px;
+    padding: 5px 0;
+    font-size: 23px;
+  }
+
+  #movieImagePoster{
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  #star{
+    padding: 10px 0;
+    display: flex;
+    font-size: 25px;
+    gap: 4px;
+    align-items: center;
+    
+  }
+  .bxs-star{
+    padding: 0px 0px 0px 15px;
+    font-size: 20px;
+  }
+  #movieRating{
+    padding: 0px ;
+    font-size: 18px;
+  }
+  #TMDB{
+    font-size: 14px;
+    background-color: var(--color-second);
+    border-radius: 5px;
+    border: solid var(--color-primary) 2px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+  }
+
+  #movieGenres{
+    padding: 0px 0;
+    font-size: 16px;
+    color: var(--color-fifth);
+  }
+
+  #movieOverview{
+    padding: 5px 0;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #trailerButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-primary);
+    border: solid 2px var(--color-primary);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 6px 0;
+  }
+  #trailerButton i{
+   font-size: 30px;
+  }
+
+
+/* ================================================ */
+.footer{
+    text-align: center;
+    color: rgb(0, 0, 0);  
+    padding: 25px;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.116);
+    margin-top: auto;
+
+}
+.derechos{
+    margin-top: 10px;
+    color: var(--color-primary);
+}
+.contenedorDeColores{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.color{
+    height: 30px;
+    width: 50px;
+    background-color:var(--color-primary);
+}
+.color1{
+    height: 30px;
+    width: 50px;
+    background-color: var(--color-second);
+    border: #ffffff solid 0.5px;
+}
+.color2{
+    height: 30px;
+    width: 50px;
+    background-color: var(--color-fourth);
+}
+.color3{
+    height: 30px;
+    width: 50px;
+    background-color: var(--color-fifth);
+}
+/* =========================================== */
+
+@media (min-width:858px){
+    .container{
+        margin: 0 50px;
+
+        max-width: 1200px;
+        overflow: hidden;
+    }
+    .nav{
+        --state-hamburguesa:scale(0);
+        --state-menu:translate(0);
+
+        
+        display: grid;
+        justify-content: start;
+        align-items: center;
+        grid-template-columns: repeat(2, max-content);
+    }
+    /* .nav:target{
+        --state-close:scale(0);
+    } */
+    /* .nav_links{
+        padding: 0 30px;
+        background:unset;
+        position: unset;
+        gap: 1.0em;
+        grid-auto-flow: column;
+     
+        transform: unset;
+       
+        grid-column: -2/-1;
+        grid-row: 1/2;
+     }
+    .nav_link{
+        font-size: 1.0rem;
+        letter-spacing: none;
+        background-color: unset;
+        color: var(--color-primary);
+    } */
+    /* .scrollNav .nav_link{
+        color: var(--color-primary);
+    } */
+    /* .nav_item{
+        list-style: none;
+          
+        padding: 0;
+        
+    } */
+    /* .primero{
+        border-top: none;
+        border-bottom: none;
+    }
+    .segundo{
+        border-bottom: none;
+    }
+    .tercero{
+        border-bottom: none;
+    }
+    .cuarto{
+        margin-top: 0;
+        border: none;
+     
+    } */
+    /* =============== */
+    
+    .nav_logo{
+      display: flex;
+      font-size: 25px;
+      color: var(--color-fourth);
+      letter-spacing: 3px;
+      align-items: center;
+      text-align: center;
+      gap: 5px;
+  }
+  .nav_logo i{
+   font-size: 35px;
+  }
+
+
+    #movieContainer.visible{
+      opacity: 1;
+      transform: scale(1);
+  }
+
+     #movieContainer {
+      opacity: 0;
+      transform: scale(1.0);
+      transition: .7s ease-in-out all;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: row;
+        height: 100%;
+        background-color: var(--color-second);
+        color: var(--color-primary);
+        margin: 0;
+      }
+    
+      #movieImageBack {
+        display: block;
+        width: 100%;
+        opacity: 0.2;
+        height: 100%;
+      } 
+
+   
+      #moviePoster {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 0 0 40px;
+        position: absolute;
+       
+      }
+
+      #movieInfo{
+        padding: 0px 20px;
+        max-width: 600px;
+        min-width: 500px;
+      }
+
+      #movieTitle{
+        padding: 5px 0;
+        font-size: 28px;
+      }
+
+      #movieImagePoster{
+        /* height: 350px;
+        width: 250px; */
+        /* margin-top: 60px;
+        height: 400px;
+        width: 300px; */
+        height: auto;
+        
+        border-radius: 5px;
+      }
+
+      #star{
+        padding: 10px 0;
+        display: flex;
+        font-size: 25px;
+        gap: 5px;
+        align-items: center;
+      }
+      .bxs-star{
+        padding: 0px 0px 0px 15px;
+      }
+      #movieRating{
+        padding: 0px ;
+        font-size: 20px;
+      }
+      #TMDB{
+        font-size: 16px;
+        background-color: var(--color-second);
+        border-radius: 5px;
+        border: solid var(--color-primary) 3px;
+        padding: 0 10px;
+        letter-spacing: 2px;
+      }
+
+      #movieGenres{
+        padding: 0px 0;
+        font-size: 20px;
+        color: var(--color-fifth);
+      }
+
+      #movieOverview{
+        padding: 5px 0;
+       
+        font-size: 18px;
+      }
+
+      #trailerButton{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 5px;
+        align-items: center;
+       
+        width: auto;
+        background-color: transparent;
+        color: var(--color-primary);
+        border: var(--color-primary) solid 3px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 6px 40px;
+        transition: 0.5s;
+        
+      }
+
+      #trailerButton i{
+       font-size: 30px;
+      }
+
+      #trailerButton:hover{
+       transition: 0.5s;
+       color: var(--color-primary);
+       background-color: var(--color-fourth);
+      }
+
+    
+
+      .menu_genres{
+        background:var(--color-second);      
+        display: grid;
+        align-content: center;
+        padding-left: 4%;
+        justify-content: start;
+        transform: var(--state-menu);
+        transition: .3s transform;
+      }
+      .check{
+        position: absolute;
+      
+        top: 16px;
+        left: 0;
+        opacity:0;
+      
+        width: 100%;
+        height: 46px;
+        cursor: pointer;
+      }
+      .genres-title{
+        color: var(--color-second);
+        font-size: 25px;
+        border-radius: 5px;
+        padding: 5px 10px;
+
+      }
+      .genres_title{
+        margin-top: 50px;
+        color: white;
+        text-align: start;
+        padding: 20px 10px 20px ;
+        width: 90%;
+        font-size: 30px;
+      }
+      .genres-item{
+        list-style: none;
+      
+        padding: 20px;
+        transform: var(--state-menu);
+        position: relative;
+      }
+      .genres-item:has( :checked){
+        --rows:1fr;
+        position: relative;
+      }
+      .menu-content{
+        display: grid;
+        justify-content: center;
+        grid-template-rows:var(--rows, 0fr) ;
+        transition: .3s grid-template-rows;
+        margin-top: 10px;
+      }
+      .menu-vertical{
+        background-color: var(--color-second);
+        overflow: hidden;
+      }
+      .menu-vertical li{
+        color: var(--color-primary);
+      }
+      .menu-vertical a{
+        color: var(--color-primary);
+      }
+}

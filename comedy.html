@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>TrailersMovies</title>
+    <link rel="icon"  href="./img/icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/movies.css">
+    <script src="https://kit.fontawesome.com/c58785cb0f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="hero" id="hero">
+        <nav class="nav container" id="nav">
+            <h2 class="nav_logo"><i class='bx bx-movie-play'></i>TRAILERS<span>MOVIES.</span></h2>
+
+            <!-- <ul class="nav_links">
+                <li class="nav_item primero"><a href="index.html" class="nav_link">Start</a></li>
+                <li class="nav_item segundo"><a href="#" class="nav_link">Movies</a></li>
+                <li class="nav_item cuarto"><b><a href="#" class="nav_link">Series</a></b></li>
+            </ul>
+
+            <a href="#nav" class="nav_hamburguesa">
+                <i class='bx bx-menu nav_icon' style='color:#ffffff'></i>
+            </a>
+
+            <a href="#" class="nav_close">
+                <i class='bx bx-x nav_icon_close' style="color: #ffffff;"></i>
+            </a> -->
+        </nav>
+    </header>
+
+   
+
+    <section id="sectionMovies">
+        <h4 class="genres_title">Comedy Movies</h4>
+        <div class="movie-slider" id="pageOne"></div>
+   
+        <div class="movie-slider" id="pageTwo"></div>
+        
+        <div class="movie-slider" id="pageThree"></div>
+
+        <div class="movie-slider" id="pageFour"></div>
+    
+        <div class="movie-slider" id="pageFive"></div>
+
+        <div class="movie-slider" id="pageSix"></div>
+
+        <div class="movie-slider" id="pageSeven"></div>
+    </section>
+
+      <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal"><i class='bx bx-x nav_icon_close' style="color: #ffffff;"></i></span>
+            <img id="modalPoster" alt="Poster de la película" class="modal-poster">
+            <h2 id="modalTitle"></h2>
+            <p><span id="modalGenre"></span></p>
+            <p><span id="modalOverview"></span></p>
+            <div id="modalStar">
+                <p id="modalTMDB">TMDB</p>
+                <i class='bx bxs-star modalBxStar'></i>
+                <p id="modalRating"></p>
+                <p id="modalReleaseDate"></p>
+            </div>
+            <button id="watchTrailer">
+                <i class='bx bx-play-circle'></i>
+                <p>Play Trailer</p>
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedorDeColores">
+            <div class="color"></div>
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+        </div>
+        
+        <div class="derechos">
+            © 2024 Created by - Alexis Acevedo.
+        </div>
+    </footer>
+    
+    <script src="./js/comedyMovies.js"></script>
+</body>
+</html>
